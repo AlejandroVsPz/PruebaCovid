@@ -29,7 +29,7 @@
           <a class="nav-link text-dark">Información</a>
         </li>
 				<li class="nav-item active">
-          <a class="nav-link text-dark">Contacto</a>
+          <a class="nav-link text-dark" aria-current="page" href="contacto.php">Contacto</a>
         </li>
       </ul>
       <form method="post" class="d-flex">
