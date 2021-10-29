@@ -6,7 +6,6 @@ $dbname = "SimuladorCovid";
 
 $con = mysqli_connect($servername, $username, $password, $dbname);
 
-
 if (!$con) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
@@ -22,6 +21,4 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   exit();
 }
-
-
 ?>

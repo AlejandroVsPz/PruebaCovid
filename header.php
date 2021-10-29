@@ -17,25 +17,24 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand ms-5" href='home.php?<?php echo "user_id=$user_id" ?>'><img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbspSimulador Covid</a>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-        <li class="nav-item active">
-          <a class="nav-link text-dark" href='prueba.php?<?php echo "user_id=$user_id" ?>'>Nueva Prueba</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-dark" href="">Información</a>
-        </li>
-				<li class="nav-item active">
-          <a class="nav-link text-dark" href="">Contacto</a>
-        </li>
-      </ul>
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand ms-5" href='home.php?<?php echo "user_id=$user_id" ?>'><img src="images/logo.png"
+                width="30" height="30" class="d-inline-block align-top" alt="">&nbspSimulador Covid</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item active">
+                    <a class="nav-link text-dark" href='prueba.php?<?php echo "user_id=$user_id" ?>'>Nueva Prueba</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-dark" aria-current="page" href="contacto.php">Contacto</a>
+                </li>
+            </ul>
 
-      <?php
+            <?php
       echo"
       <div class='dropdown me-5'>
         <button class='btn btn-outline-dark dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>
@@ -53,6 +52,6 @@
       ?>
 
 
+        </div>
     </div>
-  </div>
 </nav>
