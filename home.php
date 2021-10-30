@@ -3,7 +3,7 @@
 
 	include("header.php");
 
-	if (!isset($_SESSION['user_email'])) {
+	if (!isset($_SESSION["user_email"])) {
 		header("location: index.php");
 	}
 
