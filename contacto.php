@@ -124,17 +124,23 @@
 	<div class="px-3 pt-2 my-5 text-center border-bottom">
 		<h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Quienes somos</h1>
 		<div class="col-lg-6 mx-auto paragraph">
-			<p class="lead mb-4 text-light" style="text-shadow: 1px 1px 2px black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-				ut labore et dolore magna aliqua. Cursus turpis massa tincidunt dui. Quam quisque id diam vel quam elementum pulvinar. 
-				Eget egestas purus viverra accumsan in nisl nisi. Amet consectetur adipiscing elit pellentesque habitant morbi tristique. 
-				Morbi tempus iaculis urna id volutpat lacus. Varius sit amet mattis vulputate. 
-				Purus in massa tempor nec feugiat nisl pretium fusce id. 
+			<p class="lead mb-4 text-light" style="text-shadow: 1px 1px 2px black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+				ut labore et dolore magna aliqua. Cursus turpis massa tincidunt dui. Quam quisque id diam vel quam elementum pulvinar.
+				Eget egestas purus viverra accumsan in nisl nisi. Amet consectetur adipiscing elit pellentesque habitant morbi tristique.
+				Morbi tempus iaculis urna id volutpat lacus. Varius sit amet mattis vulputate.
+				Purus in massa tempor nec feugiat nisl pretium fusce id.
 				Turpis cursus in hac habitasse platea dictumst. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus.
-					Diam donec adipiscing tristique risus nec feugiat in fermentum. Pharetra et ultrices neque ornare aenean. 
+					Diam donec adipiscing tristique risus nec feugiat in fermentum. Pharetra et ultrices neque ornare aenean.
 					Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec.
 			</p>
 		</div>
 	</div>
+
+  <div class="b-example-divider"></div>
+
+  <?php
+    include("footer.php");
+  ?>
 
 </body>
 
