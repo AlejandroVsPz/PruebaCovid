@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Acerca de</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -35,7 +35,7 @@
                     <a class="nav-link text-dark" href="#">Prueba Covid</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-dark" aria-current="page" href="acerca.php">Acerca de</a>
+                    <a class="nav-link text-dark" aria-current="page" href="#">Acerca de</a>
                 </li>
             </ul>
             <form method="post" class="d-flex">
@@ -56,59 +56,90 @@
     </div>
 </nav>
 <style>
+.paragraph {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-        }
-    }
-    .b-example-divider {
-        height: 3rem;
-        background-image: linear-gradient(to right, rgba(244, 246, 247), rgba(169, 204, 227), rgba(244, 246, 247));
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
+.background {
+    background-image: linear-gradient(to right, rgba(179, 182, 183), rgba(40, 55, 71));
+}
 
-    @media (min-width: 992px) {
-        .rounded-lg-3 {
-            border-radius: .3rem;
-        }
-    }
+.backgroundCovid {
+    height: 630px;
+    overflow-x: hidden;
+    background-image: url("images/covid-rmn.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
 
+.backgroundAcerca {
+	height: 600px;
+    overflow-x: hidden;
+    background-image: url("images/fcc-logo.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+
+.b-example-divider {
+    height: 3rem;
+    background-image: linear-gradient(to right, rgba(244, 246, 247), rgba(169, 204, 227), rgba(244, 246, 247));
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+@media (min-width: 992px) {
+    .rounded-lg-3 {
+        border-radius: .3rem;
+    }
+}
 </style>
 
 <body>
 
-    <div class="container mt-5">
-        <h1>Hola nos gustar&iacute;a saber sobre ti, ¡Cont&aacute;ctanos!</h1>
-        <form class="row g-3">
-            <div class="col-md-6">
-                <label for="nombre" class="form-label">Nombre(s)</label>
-                <input type="text" class="form-control" id="nombre" required>
+	<div class="px-3 pt-2 my-5 text-center border-bottom">
+		<h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Simulador Covid</h1>
+		<div class="col-lg-6 mx-auto paragraph">
+            <p class="lead mb-4">Simulador Covid, es un test desarrollado por un equipo de programadores
+                de la facultad de ciencias de la computaci&oacute;n de la Benem&eacute;rita Universidad Aut&oacute;noma de Puebla.
+                Nuestro equipo realizo una investigación ardua sobre el tema para poder desarrollar este test
+                y ponerlo a disposición de la población.<br>
+                Aunque en el inicio indicamos que no sustituye una consulta medica, podemos estar seguros de que
+                es un apoyo para un diagn&oacute;stico r&aacute;pido.<br>
+                Al realizar su registro a nuestra plataforma ayudara a que el resultado del test sea m&aacute;s preciso,
+                al mismo tiempo se guarda un historial de sus pruebas donde podra consultar el resultado de cada una.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="contacto.php">
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4 gap-3">Cont&aacute;ctanos</button>
+                </a>
             </div>
-            <div class="col-md-6">
-                <label for="apellido" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="apellido" required>
-            </div>
-            <div class="col-md-6">
-                <label for="email" class="form-label">Email</label> 
-                <input type="email" class="form-control" id="email" required>               
-            </div>
-            <div class="col-md-6">
-                <label for="telefono" class="form-label">Telefono</label> 
-                <input type="tel" class="form-control" id="telfono" placeholder="(Código de área) Número">               
-            </div>
-            <div class="col-md-12">
-                <label for="comentarios" class="form-label">Comentarios</label> 
-                <textarea class="form-control" id="comentarios" rows="3">
-                </textarea>            
-            </div>
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-outline-secondary btn-lg px-4 gap-3">Enviar</button>     
-            </div>
+            <br>
+        </div>
+	</div>
 
-        </form>
+    <div class="b-example-divider"></div>
+
+    <div class="px-4 py-4 text-center backgroundAcerca">
     </div>
 
     <?php

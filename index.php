@@ -34,7 +34,7 @@
                     <a class="nav-link text-dark" href="#">Prueba Covid</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-dark" aria-current="page" href="contacto.php">Contacto</a>
+                    <a class="nav-link text-dark" aria-current="page" href="acerca.php">Acerca de</a>
                 </li>
             </ul>
             <form method="post" class="d-flex">

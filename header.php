@@ -30,7 +30,7 @@
                     <a class="nav-link text-dark" href='prueba.php?<?php echo "user_id=$user_id" ?>'>Nueva Prueba</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-dark" aria-current="page" href="contacto.php">Contacto</a>
+                    <a class="nav-link text-dark" aria-current="page" href="acerca.php">Acerca de</a>
                 </li>
             </ul>
 
