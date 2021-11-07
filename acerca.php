@@ -76,7 +76,7 @@
 }
 
 .backgroundAcerca {
-	height: 600px;
+    height: 600px;
     overflow-x: hidden;
     background-image: url("images/fcc-logo.png");
     background-repeat: no-repeat;
@@ -84,6 +84,7 @@
     background-position: center;
     background-size: contain;
 }
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -116,11 +117,12 @@
 
 <body>
 
-	<div class="px-3 pt-2 my-5 text-center border-bottom">
-		<h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Simulador Covid</h1>
-		<div class="col-lg-6 mx-auto paragraph">
+    <div class="px-3 pt-2 my-5 text-center border-bottom">
+        <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Simulador Covid</h1>
+        <div class="col-lg-6 mx-auto paragraph">
             <p class="lead mb-4">Simulador Covid, es un test desarrollado por un equipo de programadores
-                de la facultad de ciencias de la computaci&oacute;n de la Benem&eacute;rita Universidad Aut&oacute;noma de Puebla.
+                de la facultad de ciencias de la computaci&oacute;n de la Benem&eacute;rita Universidad Aut&oacute;noma
+                de Puebla.
                 Nuestro equipo realizo una investigación ardua sobre el tema para poder desarrollar este test
                 y ponerlo a disposición de la población.<br>
                 Aunque en el inicio indicamos que no sustituye una consulta medica, podemos estar seguros de que
@@ -130,16 +132,62 @@
             </p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <a href="contacto.php">
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4 gap-3">Cont&aacute;ctanos</button>
+                    <button type="button"
+                        class="btn btn-outline-secondary btn-lg px-4 gap-3">Cont&aacute;ctanos</button>
                 </a>
             </div>
             <br>
         </div>
-	</div>
+    </div>
 
     <div class="b-example-divider"></div>
-
-    <div class="px-4 py-4 text-center backgroundAcerca">
+    <div class="px-4 py-4 text-center backgroundAcerca"></div>
+    <div class="b-example-divider"></div>
+    <div class="text-center">
+        <h1>Nuestro equipo de desarrollo</h1>
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="./user_images/profile_picture.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ingeniero </h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./user_images/profile_picture.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ingeniero </h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./user_images/profile_picture.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ingeniero Iv&aacute;n Eduardo De Alba</h5>
+                            <p class="card-text">Encargado del fronted</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./user_images/profile_picture.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ingeniero </h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <?php
