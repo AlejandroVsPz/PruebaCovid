@@ -90,13 +90,12 @@
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
              </div>
              <ul class="list-group list-group-flush">
-               <li class="list-group-item">An item</li>
-               <li class="list-group-item">A second item</li>
-               <li class="list-group-item">A third item</li>
+               <li class="list-group-item"><?php echo($resultado['user_email'])  ?></li>
+               <li class="list-group-item"><?php echo($resultado['user_phone'])  ?></li>
+               <li class="list-group-item"><?php echo($resultado['user_birthday'])  ?></li>
              </ul>
              <div class="card-body">
-               <a href="#" class="card-link">Card link</a>
-               <a href="#" class="card-link">Another link</a>
+               <a href="edit_profile.php?<?php echo "user_id=$user_id" ?>"><center><button type="button" class="btn btn-outline-dark btn-sm">Editar Perfil</button></center></a>
              </div>
          </div>
        </div>
@@ -106,7 +105,7 @@
  <br>
  <br>
  <br>
- 
+
  <?php
    }
   ?>

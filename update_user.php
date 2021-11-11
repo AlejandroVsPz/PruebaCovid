@@ -27,7 +27,7 @@ if (isset($_POST["submit"])){
 
 
 		if (mysqli_query($con, $actualizar)) {
-			echo "<script>alert('Se actualizo el usuario: $nombre , listo para seguir.')</script>";
+			echo "<script>alert('Se guardaron los cambios $nombre , listo para seguir.')</script>";
 			//mysqli_close($con);
 			echo "<script>window.open('home.php', '_self')</script>";
 		}else {
