@@ -35,7 +35,7 @@
                     <a class="nav-link text-dark" href="#">Prueba Covid</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-dark" aria-current="page" href="#">Contacto</a>
+                    <a class="nav-link text-dark" aria-current="page" href="acerca.php">Acerca de</a>
                 </li>
             </ul>
             <form method="post" class="d-flex">
@@ -56,91 +56,64 @@
     </div>
 </nav>
 <style>
-.paragraph {
-    text-align: justify;
-    text-justify: inter-word;
-}
 
-.background {
-    background-image: linear-gradient(to right, rgba(179, 182, 183), rgba(40, 55, 71));
-}
-
-.backgroundCovid {
-    height: 500px;
-    overflow-x: hidden;
-    background-image: url("images/covid.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-
-.backgroundContacto {
-	height: 600px;
-    overflow-x: hidden;
-    background-image: url("images/fcc-logo.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: contain;
-}
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
     }
-}
-
-
-.b-example-divider {
-    height: 3rem;
-    background-image: linear-gradient(to right, rgba(244, 246, 247), rgba(169, 204, 227), rgba(244, 246, 247));
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-@media (min-width: 992px) {
-    .rounded-lg-3 {
-        border-radius: .3rem;
+    .b-example-divider {
+        height: 3rem;
+        background-image: linear-gradient(to right, rgba(244, 246, 247), rgba(169, 204, 227), rgba(244, 246, 247));
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
     }
-}
+
+    @media (min-width: 992px) {
+        .rounded-lg-3 {
+            border-radius: .3rem;
+        }
+    }
+
 </style>
 
 <body>
 
-	<div class="px-4 py-4 text-center backgroundContacto">
+    <div class="container mt-5">
+        <h1>Hola nos gustar&iacute;a saber sobre ti, ¡Cont&aacute;ctanos!</h1>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre(s)</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellido" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label> 
+                <input type="email" class="form-control" id="email" required>               
+            </div>
+            <div class="col-md-6">
+                <label for="telefono" class="form-label">Telefono</label> 
+                <input type="tel" class="form-control" id="telfono" placeholder="(Código de área) Número">               
+            </div>
+            <div class="col-md-12">
+                <label for="comentarios" class="form-label">Comentarios</label> 
+                <textarea class="form-control" id="comentarios" rows="3">
+                </textarea>            
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-outline-secondary btn-lg px-4 gap-3">Enviar</button>     
+            </div>
+
+        </form>
     </div>
 
-	<div class="b-example-divider"></div>
-
-	<div class="px-3 pt-2 my-5 text-center border-bottom">
-		<h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Quienes somos</h1>
-		<div class="col-lg-6 mx-auto paragraph">
-			<p class="lead mb-4 text-light" style="text-shadow: 1px 1px 2px black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-				ut labore et dolore magna aliqua. Cursus turpis massa tincidunt dui. Quam quisque id diam vel quam elementum pulvinar.
-				Eget egestas purus viverra accumsan in nisl nisi. Amet consectetur adipiscing elit pellentesque habitant morbi tristique.
-				Morbi tempus iaculis urna id volutpat lacus. Varius sit amet mattis vulputate.
-				Purus in massa tempor nec feugiat nisl pretium fusce id.
-				Turpis cursus in hac habitasse platea dictumst. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus.
-					Diam donec adipiscing tristique risus nec feugiat in fermentum. Pharetra et ultrices neque ornare aenean.
-					Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec.
-			</p>
-		</div>
-	</div>
-
-  <div class="b-example-divider"></div>
-
-  <?php
-    include("footer.php");
-  ?>
+    <?php
+        include("footer.php");
+    ?>
 
 </body>
 

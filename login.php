@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  
+
 	include("conexion.php");
 
 	if (isset($_POST["login"])) {
@@ -21,7 +21,7 @@
 
 			echo "<script>window.open('home.php', '_self')</script>";
 		}else{
-			echo "<script>alert('Your email or password is incorrect')</script>";
+			echo "<script>alert('Tu correo o contraseña son incorrectos')</script>";
 		}
 	}
  ?>
