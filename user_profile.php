@@ -28,6 +28,7 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
          integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
      </script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 
      <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
  </head>
@@ -49,7 +50,7 @@
   background-color: rgba(255,255,255, 0.5);
   border: 2px solid #34495e;
   padding: 40px 50px;
-   border-radius: 20px;
+  border-radius: 20px;
 }
 
 
@@ -72,6 +73,12 @@
   letter-spacing: -1px;
 }
 
+.image_card{
+  height: auto;
+  width: auto;
+  display: block;
+}
+
  </style>
 
  <body>
@@ -84,19 +91,24 @@
      <div class="main-content">
          <div class="l-part">
            <div class="card" style="width: 18rem;">
-             <img src="user_images/profile_picture.png" class="card-img-top" alt="...">
+             <img src="user_images/<?php echo($resultado['user_image'])  ?>" class="card-img-top image_card" alt="...">
              <div class="card-body">
                <h5 class="card-title"><?php echo($resultado['user_name'])  ?> <?php echo($resultado['user_lastname'])  ?></h5>
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
              </div>
              <ul class="list-group list-group-flush">
-               <li class="list-group-item"><?php echo($resultado['user_email'])  ?></li>
-               <li class="list-group-item"><?php echo($resultado['user_phone'])  ?></li>
-               <li class="list-group-item"><?php echo($resultado['user_birthday'])  ?></li>
+               <li class="list-group-item"><i class="bi bi-envelope-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_email'])  ?></li>
+               <li class="list-group-item"><i class="bi bi-telephone-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_phone'])  ?></li>
+               <li class="list-group-item"><i class="bi bi-calendar-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_birthday'])  ?></li>
              </ul>
-             <div class="card-body">
-               <a href="edit_profile.php?<?php echo "user_id=$user_id" ?>"><center><button type="button" class="btn btn-outline-dark btn-sm">Editar Perfil</button></center></a>
-             </div>
+             <form action="user_profile.php?<?php echo "user_id=$user_id" ?>" method='post' enctype='multipart/form-data'>
+               <div class="card-body">
+                  <div class="input-group">
+                      <input type="file" class="form-control" name="user_image" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" >
+                      <button class="btn  btn-outline-dark" name="update" type="submit" id="inputGroupFileAddon04">Subir</button>
+                  </div>
+               </div>
+             </form>
          </div>
        </div>
      </div>
@@ -105,6 +117,41 @@
  <br>
  <br>
  <br>
+
+ <?php
+
+ $file_path = "user_images/".$profile_pic;
+
+   if (isset($_POST['update'])) {
+       $user_image = $_FILES["user_image"]["name"];
+       $image_tmp = $_FILES["user_image"]["tmp_name"];
+       $random_number = rand(1,100);
+       $deleted = unlink($file_path);
+
+       /*printf("$user_image ");
+       printf("$image_tmp ");
+       printf("$user_id ");
+       printf("$user_image.$user_id");*/
+
+       if ($user_image == ' ') {
+         echo "<script>alert('Porfavor selecciona una imagen')</script>";
+         echo "<script>window.open('user_profile.php?user_id=$user_id','_self')</script>";
+         exit();
+       }else{
+         move_uploaded_file($image_tmp, "user_images/$user_id$user_image");
+
+         $update = "UPDATE User SET user_image='$user_id$user_image' WHERE user_id='$user_id'";
+
+         $run = mysqli_query($con, $update);
+
+         if ($run) {
+           echo "<script>alert('Imagen Guardada')</script>";
+           echo "<script>window.open('user_profile.php?user_id=$user_id' ,'_self')</script>";
+         }
+       }
+     }
+
+  ?>
 
  <?php
    }

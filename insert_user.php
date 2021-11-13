@@ -8,7 +8,7 @@ if (isset($_POST["submit"])){
 	$email = htmlentities(mysqli_real_escape_string($con,$_POST['email']));
 	$pass = htmlentities(mysqli_real_escape_string($con,$_POST['pass']));
 	$passconfirm = htmlentities(mysqli_real_escape_string($con,$_POST['passconfirm']));
-	$profile_pic = "users_images/profile_picture.png";
+	$profile_pic = "profile_picture.png";
 
 	if (strlen($pass) < 6) {
 		echo "<script>alert('La contraseña debe de ser mayor a 6 caracteres!')</script>";

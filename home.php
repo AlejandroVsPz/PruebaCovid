@@ -92,7 +92,7 @@
                 alteración del nivel de conciencia, dolor torácico importante...) deberá consultar con el servicio de
                 emergencias sanitarias.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-light btn-lg px-4 gap-3">Realizar Prueba</button>
+                <a href="prueba_covid.php?<?php echo "user_id=$user_id" ?>"><button type="button" class="btn btn-light btn-lg px-4 gap-3">Realizar Prueba</button></a>
             </div>
         </div>
     </div>

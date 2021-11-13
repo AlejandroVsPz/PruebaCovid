@@ -89,7 +89,7 @@ body {
                                 required="required">
                         </div><br>
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <span class="input-group-addon"><i class="fas fa-envelope-square"></i></span>
                             <input type="email" id="email" name="email" class="form-control"
                                 placeholder="Correo Electronico" required="required">
                         </div><br>
