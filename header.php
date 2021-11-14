@@ -13,6 +13,7 @@
   $correo = $row['user_email'];
   $profile_pic = $row['user_image'];
 	$telefono = $row['user_phone'];
+	$fecha_nacimiento = $row['user_birthday']
 
  ?>
 

@@ -45,7 +45,7 @@
 }
 .main-content{
   width: 90%;
-  height: 100%;
+  height: auto;
   margin: 60px auto;
   background-color: rgba(255,255,255, 0.5);
   border: 2px solid #34495e;
@@ -114,9 +114,6 @@
      </div>
    </div>
  </div>
- <br>
- <br>
- <br>
 
  <?php
 

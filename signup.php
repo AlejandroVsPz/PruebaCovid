@@ -108,9 +108,9 @@ body {
                                 class="btn btn-outline-dark btn-lg" id="signup" /></center>
                         <!--<center><button class="btn btn-info btn-lg" id="signup" name="sign_up">Sign Up</button></center>-->
                         <?php
-            include("insert_user.php");
+                          include("insert_user.php");
 
-           ?>
+                         ?>
                         <center><small id="emailHelp" class="form-text text-dark" style="text-align: center;">Al
                                 registrarse, acepta los Términos de servicio y la Política de privacidad. </small>
                         </center>
