@@ -240,7 +240,7 @@
      						<div class="input-group">
                   <div class="row">
                     <div class="col">
-                      <input type="number" name="peso" class="form-control" placeholder="65 (kg)" required="required" >
+                      <input type="number" step="any" name="peso" class="form-control" placeholder="65 (kg)" required="required" >
                     </div>
                   </div>
      						</div><br>
@@ -251,7 +251,7 @@
      						<div class="input-group">
                   <div class="rows">
                     <div class="col">
-                      <input type="number" name="estatura" class="form-control" placeholder="1.63 (m)"  required="required">
+                      <input type="number" step="any" name="estatura" class="form-control" placeholder="1.63 (m)"  required="required">
                     </div>
                   </div>
      						</div><br>
@@ -263,7 +263,7 @@
      						<div class="input-group">
                   <div class="row">
                     <div class="col">
-                      <input type="number" name="temperatura" class="form-control" placeholder="37 (ºC)">
+                      <input type="number"  step="any" name="temperatura" class="form-control" placeholder="37 (ºC)">
                     </div>
                   </div>
      						</div><br>
@@ -275,7 +275,7 @@
      						<div class="input-group">
                   <div class="row">
                     <div class="col">
-                      <input type="number" name="oxigeno" class="form-control" placeholder="96 (SPO2)">
+                      <input type="number" step="any" name="oxigeno" class="form-control" placeholder="96 (SPO2)">
                     </div>
                   </div>
      						</div><br>
@@ -287,10 +287,10 @@
      						<div class="input-group">
                   <div class="row">
                     <div class="col">
-                      <input type="number" name="sistolica" class="form-control" placeholder="120 (SYS)">
+                      <input type="number" step="any" name="sistolica" class="form-control" placeholder="120 (SYS)">
                     </div>
                     <div class="col">
-                      <input type="number" name="diastolica" class="form-control" placeholder="80 (DIA)">
+                      <input type="number"step="any" name="diastolica" class="form-control" placeholder="80 (DIA)">
                     </div>
                   </div>
      						</div>

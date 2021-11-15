@@ -30,8 +30,6 @@ if (isset($_POST["submit"])){
     $dolor_torax =  htmlentities(mysqli_real_escape_string($con, $_POST['q9']));
     $diarrea =  htmlentities(mysqli_real_escape_string($con, $_POST['q10']));
     $enfermedades =  htmlentities(mysqli_real_escape_string($con, $_POST['q11']));
-    $nueva_fecha = verfecha($_POST['fecha_nacimiento']);
-    $edad = calcular_edad($nueva_fecha);
     $peso =  htmlentities(mysqli_real_escape_string($con, $_POST['peso']));
     $estatura =  htmlentities(mysqli_real_escape_string($con, $_POST['estatura']));
     $temperatura =  htmlentities(mysqli_real_escape_string($con, $_POST['temperatura']));
@@ -43,6 +41,13 @@ if (isset($_POST["submit"])){
 
     date_default_timezone_set('America/Mexico_City');
     //$date = date('m/d/Y h:i:s a', time());
+
+    if ($_POST['fecha_nacimiento'] == '') {
+      $edad = 0;
+    }else {
+      $nueva_fecha = verfecha($_POST['fecha_nacimiento']);
+      $edad = calcular_edad($nueva_fecha);
+    }
 
     $select_user = "SELECT * FROM User WHERE user_id='$id'";
 		$query = mysqli_query($con, $select_user);
