@@ -22,6 +22,8 @@ if (isset($_POST["submit"])){
 		exit();
 	}
 
+	$encrypt_pass = password_hash($pass, PASSWORD_DEFAULT);
+
 	$check_user = "SELECT * FROM User WHERE user_email='$email'";
 
 	$run_user = mysqli_query($con, $check_user);
@@ -34,12 +36,12 @@ if (isset($_POST["submit"])){
 		exit();
 	}
 
-	$insert = "INSERT INTO `User` (`user_name`, `user_lastname`, `user_email`, `user_password`,`user_image`) VALUES('$nombre', '$apellido', '$email','$pass','$profile_pic')";
+	$insert = "INSERT INTO `User` (`user_name`, `user_lastname`, `user_email`, `user_password`,`user_image`) VALUES('$nombre', '$apellido', '$email','$encrypt_pass','$profile_pic')";
 
 	if (mysqli_query($con, $insert)) {
 		echo "<script>alert('Bien hecho $nombre , listo para seguir.')</script>";
 		//mysqli_close($con);
-		echo "<script>window.open('home.php', '_self')</script>";
+		echo "<script>window.open('signin.php', '_self')</script>";
 	}else {
 		echo "<script>alert('No se pudo registrar, intenta otra ves!')</script>";
 		echo "Error: " . $insert . "<br>" . mysqli_error($con);

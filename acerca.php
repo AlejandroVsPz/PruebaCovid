@@ -25,7 +25,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand ms-5" href="index.php"><img src="images/logo.png" width="30" height="30"
-                class="d-inline-block align-top" alt="">&nbspSimulador Covid</a>
+                class="d-inline-block align-top" alt="">&nbspSimulador COVID</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item active">
@@ -118,9 +118,9 @@
 <body>
 
     <div class="px-3 pt-2 my-5 text-center border-bottom">
-        <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Simulador Covid</h1>
+        <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Simulador COVID</h1>
         <div class="col-lg-6 mx-auto paragraph">
-            <p class="lead mb-4">Simulador Covid, es un test desarrollado por un equipo de programadores
+            <p class="lead mb-4">Simulador COVID, es un test desarrollado por un equipo de programadores
                 de la facultad de ciencias de la computaci&oacute;n de la Benem&eacute;rita Universidad Aut&oacute;noma
                 de Puebla.
                 Nuestro equipo realizo una investigación ardua sobre el tema para poder desarrollar este test

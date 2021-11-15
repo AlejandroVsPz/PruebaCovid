@@ -16,7 +16,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand ms-5" href="index.php"><img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbspSimulador Covid</a>
+      <a class="navbar-brand ms-5" href="index.php"><img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbspSimulador COVID</a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
 

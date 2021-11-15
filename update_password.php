@@ -15,12 +15,6 @@ if (isset($_POST["submit"])){
 		$row = mysqli_fetch_array($query);
 		$user_password = $row['user_password'];
 
-    if ($last_password != $user_password) {
-  		echo "<script>alert('Ups, la contraseña anterior es incorrecta!')</script>";
-  		echo "<script>window.open('edit_password.php?user_id=$user_id', '_self')</script>";
-  		exit();
-  	}
-
   	if ($new_password != $confirm_password) {
   		echo "<script>alert('Ups, las contraseñas no coinciden!')</script>";
   		echo "<script>window.open('edit_password.php?user_id=$user_id', '_self')</script>";
@@ -33,7 +27,17 @@ if (isset($_POST["submit"])){
 			exit();
 		}
 
-		$actualizar = "UPDATE User SET user_password = '$new_password' WHERE user_id = '$id' ";
+		$verify = password_verify($last_password,$user_password);
+
+		if ($verify) {
+			$encrypt_pass = password_hash($new_password, PASSWORD_DEFAULT);
+		}else {
+			echo "<script>alert('Ups, la contraseña anterior es incorrecta!')</script>";
+  		echo "<script>window.open('edit_password.php?user_id=$user_id', '_self')</script>";
+  		exit();
+		}
+
+		$actualizar = "UPDATE User SET user_password = '$encrypt_pass' WHERE user_id = '$id' ";
 
 
 		if (mysqli_query($con, $actualizar)) {

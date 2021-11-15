@@ -24,14 +24,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand ms-5" href="index.php"><img src="images/logo.png" width="30" height="30"
-                class="d-inline-block align-top" alt="">&nbspSimulador Covid</a>
+                class="d-inline-block align-top" alt="">&nbspSimulador COVID</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item active">
                     <a class="nav-link text-dark" aria-current="page" href="index.php">Inicio</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-dark" href="#">Prueba Covid</a>
+                    <a class="nav-link text-dark" href="signin.php">Prueba COVID-19</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link text-dark" aria-current="page" href="acerca.php">Acerca de</a>
@@ -108,7 +108,7 @@
 
     <div class="px-4 py-4 text-center backgroundCovid">
         <img class="d-block mx-auto mb-4" src="images/logo.png" alt="" width="72" height="72">
-        <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Prueba Covid</h1>
+        <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Prueba COVID-19</h1>
         <div class="col-lg-6 mx-auto paragraph">
             <p class="lead mb-4 text-light" style="text-shadow: 1px 1px 2px black;">Este auto-test le permitirá
                 orientarse con respecto a los síntomas de la COVID-19, pero debe saber que nunca sustituirá una consulta

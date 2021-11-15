@@ -41,7 +41,7 @@
         <div class="col-xl d-flex align-items-center">
             <a href=""><img src="images/logo.png" width="30" height="30" class="mb-3 me-2 mb-md-0 text-dark lh-1"
                     alt=""></a>
-            <span class="text-dark">&copy; 2021 Simulador Covid</span>
+            <span class="text-dark">&copy; 2021 Simulador COVID</span>
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

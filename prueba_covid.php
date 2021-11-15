@@ -86,7 +86,7 @@
    <div class="col-sm-12">
      <div class="main-content">
        <div class="header">
-         <h3 style="text-align: center; font-family: 'Arial'; letter-spacing: 1pt;" id="h3"><strong>Prueba Covid</strong></h3>
+         <h3 style="text-align: center; font-family: 'Arial'; letter-spacing: 1pt;" id="h3"><strong>Prueba COVID-19</strong></h3>
        </div>
          <div class="l-part">
            <div class="col-lg-12 mx-auto paragraph">
