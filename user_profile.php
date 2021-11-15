@@ -123,8 +123,9 @@
        $user_image = $_FILES["user_image"]["name"];
        $image_tmp = $_FILES["user_image"]["tmp_name"];
        $random_number = rand(1,100);
-       $deleted = unlink($file_path);
-
+			 if ($file_path != 'user_images/profile_picture.png') {
+			 	$deleted = unlink($file_path);
+			 }
        /*printf("$user_image ");
        printf("$image_tmp ");
        printf("$user_id ");
