@@ -65,20 +65,63 @@ if (isset($_POST["submit"])){
 
     $insert = "INSERT INTO `Sintomas` (`user_id`, `user_name`, `user_lastname`, `fiebre`, `tos`, `perdida_de_olfato`, `dificultad_para_respirar`, `dolores_musculares`, `dolor_de_cabeza`, `dolor_de_garganta`, `dolor_torax`, `diarrea`, `edad`, `peso`, `estatura`, `temperatura`, `nivel_de_oxigeno`, `presion_arterial`, `imc`) VALUES('$id', '$user_name', '$user_lastname', '$fiebre','$tos','$perdida_de_olfato', '$dificultad_para_respirar', '$dolores_musculares', '$dolor_de_cabeza','$dolor_de_garganta', '$dolor_torax', '$diarrea', '$edad', '$peso', '$estatura', '$temperatura', '$nivel_de_oxigeno', '$presion_arterial', '$imc' )";
 
+    $resultado = 0;
 
 
-
-
-    if (mysqli_query($con, $insert)) {
-      echo "<script>alert('Bien hecho $user_name , listo para seguir.')</script>";
-      //mysqli_close($con);
-      echo "<script>window.open('home.php?user_id=$user_id', '_self')</script>";
-    }else {
-      echo "<script>alert('No se pudo registrar, intenta otra ves!')</script>";
-      echo "Error: " . $insert . "<br>" . mysqli_error($con);
-      echo "<script>window.open('prueba_covid.php?user_id=$user_id', '_self')</script>";
+    if ($cerca_de_covid == 1) {
+      $resultado = $resultado + 7.5;
     }
-	}
+    if ($fiebre == 1 || $temperatura >= 38) {
+      $resultado = $resultado + 7.8;
+    }
+    if ($tos == 1) {
+      $resultado = $resultado + 5.7;
+    }
+    if ($perdida_de_olfato == 1) {
+      $resultado = $resultado + 2.5;
+    }
+    if ($dificultad_para_respirar == 1) {
+      $resultado = $resultado + 2.3;
+    }
+    if ($dolores_musculares == 1) {
+      $resultado = $resultado + 1.7;
+    }
+    if ($dolor_de_cabeza == 1) {
+      $resultado = $resultado + 1.3;
+    }
+    if ($dolor_de_garganta == 1) {
+      $resultado = $resultado + 1.2;
+    }
+    if ($dolor_torax == 1) {
+      $resultado = $resultado + 1.2;
+    }
+    if ($diarrea == 1) {
+      $resultado = $resultado + 1;
+    }
 
+if ($resultado >= 21) {
+  if (mysqli_query($con, $insert)) {
+    echo "<script>alert('Test realizado $user_name , calculando resultado.')</script>";
+    //mysqli_close($con);
+    echo "<script>window.open('rojo.php?user_id=$user_id', '_self')</script>";
+  }else {
+    echo "<script>alert('Test no registrado, intenta otra ves!')</script>";
+    echo "Error: " . $insert . "<br>" . mysqli_error($con);
+    echo "<script>window.open('prueba_covid.php?user_id=$user_id', '_self')</script>";
+  }
+}else {
+  if (mysqli_query($con, $insert)) {
+    echo "<script>alert('Test realizado $user_name , calculando resultado.')</script>";
+    //mysqli_close($con);
+    echo "<script>window.open('verde.php?user_id=$user_id', '_self')</script>";
+  }else {
+    echo "<script>alert('Test no registrado, intenta otra ves!')</script>";
+    echo "Error: " . $insert . "<br>" . mysqli_error($con);
+    echo "<script>window.open('prueba_covid.php?user_id=$user_id', '_self')</script>";
+  }
+}
+
+
+	}
 
  ?>
