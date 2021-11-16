@@ -87,11 +87,11 @@
 
     ?>
    <div class="row">
-   <div class="col-sm-12">
+   <div class="col-lg-12">
      <div class="main-content">
          <div class="container">
 					 <div class="row">
-						 <div class="col-3">
+						 <div class="col-lg-3">
 		           <div class="card" >
 		             <img src="user_images/<?php echo($resultado['user_image'])  ?>" class="card-img-top image_card" alt="...">
 		             <div class="card-body">
@@ -113,7 +113,12 @@
 		             </form>
 		         		</div>
 							</div>
-							<div class="col-9">
+							<?php
+								$tabla = "SELECT * FROM Sintomas ";
+								$resultado_tabla = mysqli_query($con, $tabla);
+
+							 ?>
+							<div class="col-lg-9">
 								<div class="table-responsive">
 									<table class="table table-sm table-hover table-bordered border border-dark">
 									  <thead>
@@ -128,30 +133,40 @@
 												<th scope="col">Dolor de garganta</th>
 												<th scope="col">Dolor de torax</th>
 												<th scope="col">Diarrea</th>
-												<th scope="col">Temperatura</th>
-												<th scope="col">Nivel de oxígeno</th>
-												<th scope="col">Presión arterial</th>
+												<th scope="col">Temperatura (ºC)</th>
+												<th scope="col">Nivel de oxígeno (SPO2)</th>
+												<th scope="col">Presión arterial (SYS/DIA)</th>
 												<th scope="col">IMC</th>
 												<th scope="col">Sintomas relacionados con COVID-19</th>
 									    </tr>
 									  </thead>
-									  <tbody>
+										<?php
+											while ($filas = mysqli_fetch_array($resultado_tabla)) {
+												if ($filas['user_id'] == $id ) {
+										 ?>
+									  <tbody style="text-align: center; vertical-align: middle;">
 									    <tr>
-									      <td>Mark</td>
-									      <td>Otto</td>
-									      <td>@mdo</td>
-									    </tr>
-									    <tr>
-									      <td>Jacob</td>
-									      <td>Thornton</td>
-									      <td>@fat</td>
-									    </tr>
-									    <tr>
-									      <td>Larry</td>
-									      <td>the Bird</td>
-									      <td>@twitter</td>
+												<td><?php echo $filas['fecha']; ?></td>
+									      <td><?php if ($filas['fiebre'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
+												<td><?php if ($filas['tos'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
+												<td><?php if ($filas['perdida_de_olfato'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
+												<td><?php if ($filas['dificultad_para_respirar'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
+												<td><?php if ($filas['dolores_musculares'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
+												<td><?php if ($filas['dolor_de_cabeza'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
+												<td><?php if ($filas['dolor_de_garganta'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
+												<td><?php if ($filas['dolor_torax'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
+												<td><?php if ($filas['diarrea'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
+												<td><?php echo $filas['temperatura']; ?></td>
+												<td><?php echo $filas['nivel_de_oxigeno']; ?></td>
+												<td><?php echo $filas['presion_arterial']; ?></td>
+												<td><?php echo $filas['imc']; ?></td>
+												<td><?php if ($filas['sintomas_relacionados'] == 1 ) { echo "Si";}else{echo "No";} ?></td>
 									    </tr>
 									  </tbody>
+										<?php
+												}
+											}
+										 ?>
 									</table>
 								</div>
 							</div>
