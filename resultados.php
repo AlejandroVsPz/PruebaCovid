@@ -38,10 +38,11 @@ if (isset($_POST["submit"])){
     $presion_diastolica =  htmlentities(mysqli_real_escape_string($con, $_POST['diastolica']));
     $presion_arterial = $presion_sistolica.'/'.$presion_diastolica;
     $imc = ($peso/($estatura*$estatura));
+		$sintomas_relacionados = 0;
 
-    date_default_timezone_set('America/Mexico_City');
-    //$date = date('m/d/Y h:i:s a', time());
-
+		date_default_timezone_set('America/Mexico_City');
+		$fecha = date('Y-m-d H:i:s');
+		
     if ($_POST['fecha_nacimiento'] == '') {
       $edad = 0;
     }else {
@@ -62,11 +63,7 @@ if (isset($_POST["submit"])){
 			exit();
 		}
 
-
-    $insert = "INSERT INTO `Sintomas` (`user_id`, `user_name`, `user_lastname`, `fiebre`, `tos`, `perdida_de_olfato`, `dificultad_para_respirar`, `dolores_musculares`, `dolor_de_cabeza`, `dolor_de_garganta`, `dolor_torax`, `diarrea`, `edad`, `peso`, `estatura`, `temperatura`, `nivel_de_oxigeno`, `presion_arterial`, `imc`) VALUES('$id', '$user_name', '$user_lastname', '$fiebre','$tos','$perdida_de_olfato', '$dificultad_para_respirar', '$dolores_musculares', '$dolor_de_cabeza','$dolor_de_garganta', '$dolor_torax', '$diarrea', '$edad', '$peso', '$estatura', '$temperatura', '$nivel_de_oxigeno', '$presion_arterial', '$imc' )";
-
     $resultado = 0;
-
 
     if ($cerca_de_covid == 1) {
       $resultado = $resultado + 7.5;
@@ -98,6 +95,14 @@ if (isset($_POST["submit"])){
     if ($diarrea == 1) {
       $resultado = $resultado + 1;
     }
+
+		if ($resultado >=21) {
+			$sintomas_relacionados = 1;
+		}else {
+			$sintomas_relacionados = 0;
+		}
+
+		$insert = "INSERT INTO `Sintomas` (`user_id`, `user_name`, `user_lastname`, `fiebre`, `tos`, `perdida_de_olfato`, `dificultad_para_respirar`, `dolores_musculares`, `dolor_de_cabeza`, `dolor_de_garganta`, `dolor_torax`, `diarrea`, `edad`, `peso`, `estatura`, `temperatura`, `nivel_de_oxigeno`, `presion_arterial`, `imc`,`fecha`, `sintomas_relacionados`) VALUES('$id', '$user_name', '$user_lastname', '$fiebre','$tos','$perdida_de_olfato', '$dificultad_para_respirar', '$dolores_musculares', '$dolor_de_cabeza','$dolor_de_garganta', '$dolor_torax', '$diarrea', '$edad', '$peso', '$estatura', '$temperatura', '$nivel_de_oxigeno', '$presion_arterial', '$imc' ,'$fecha','$sintomas_relacionados')";
 
 if ($resultado >= 21) {
   if (mysqli_query($con, $insert)) {

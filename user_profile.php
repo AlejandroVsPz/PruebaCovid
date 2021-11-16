@@ -89,27 +89,73 @@
    <div class="row">
    <div class="col-sm-12">
      <div class="main-content">
-         <div class="l-part">
-           <div class="card" style="width: 18rem;">
-             <img src="user_images/<?php echo($resultado['user_image'])  ?>" class="card-img-top image_card" alt="...">
-             <div class="card-body">
-               <h5 class="card-title"><?php echo($resultado['user_name'])  ?> <?php echo($resultado['user_lastname'])  ?></h5>
-               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             </div>
-             <ul class="list-group list-group-flush">
-               <li class="list-group-item"><i class="bi bi-envelope-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_email'])  ?></li>
-               <li class="list-group-item"><i class="bi bi-telephone-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_phone'])  ?></li>
-               <li class="list-group-item"><i class="bi bi-calendar-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_birthday'])  ?></li>
-             </ul>
-             <form action="user_profile.php?<?php echo "user_id=$user_id" ?>" method='post' enctype='multipart/form-data'>
-               <div class="card-body">
-                  <div class="input-group">
-                      <input type="file" class="form-control" name="user_image" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" >
-                      <button class="btn  btn-outline-dark" name="update" type="submit" id="inputGroupFileAddon04">Subir</button>
-                  </div>
-               </div>
-             </form>
-         </div>
+         <div class="container">
+					 <div class="row">
+						 <div class="col-3">
+		           <div class="card" >
+		             <img src="user_images/<?php echo($resultado['user_image'])  ?>" class="card-img-top image_card" alt="...">
+		             <div class="card-body">
+		               <h5 class="card-title"><?php echo($resultado['user_name'])  ?> <?php echo($resultado['user_lastname'])  ?></h5>
+		               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		             </div>
+		             <ul class="list-group list-group-flush">
+		               <li class="list-group-item"><i class="bi bi-envelope-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_email'])  ?></li>
+		               <li class="list-group-item"><i class="bi bi-telephone-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_phone'])  ?></li>
+		               <li class="list-group-item"><i class="bi bi-calendar-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_birthday'])  ?></li>
+		             </ul>
+		             <form action="user_profile.php?<?php echo "user_id=$user_id" ?>" method='post' enctype='multipart/form-data'>
+		               <div class="card-body">
+		                  <div class="input-group">
+		                      <input type="file" class="form-control" name="user_image" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" >
+		                      <button class="btn  btn-outline-dark" name="update" type="submit" id="inputGroupFileAddon04">Subir</button>
+		                  </div>
+		               </div>
+		             </form>
+		         		</div>
+							</div>
+							<div class="col-9">
+								<div class="table-responsive">
+									<table class="table table-sm table-hover table-bordered border border-dark">
+									  <thead>
+									    <tr style="text-align: center; vertical-align: middle;">
+									      <th scope="col">Fecha</th>
+									      <th scope="col">Fiebre</th>
+									      <th scope="col">Tos</th>
+									      <th scope="col">Perdida de olfato</th>
+												<th scope="col">Dificultad para respirar</th>
+												<th scope="col">Dolores musculares</th>
+												<th scope="col">Dolor de cabeza</th>
+												<th scope="col">Dolor de garganta</th>
+												<th scope="col">Dolor de torax</th>
+												<th scope="col">Diarrea</th>
+												<th scope="col">Temperatura</th>
+												<th scope="col">Nivel de oxígeno</th>
+												<th scope="col">Presión arterial</th>
+												<th scope="col">IMC</th>
+												<th scope="col">Sintomas relacionados con COVID-19</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td>Mark</td>
+									      <td>Otto</td>
+									      <td>@mdo</td>
+									    </tr>
+									    <tr>
+									      <td>Jacob</td>
+									      <td>Thornton</td>
+									      <td>@fat</td>
+									    </tr>
+									    <tr>
+									      <td>Larry</td>
+									      <td>the Bird</td>
+									      <td>@twitter</td>
+									    </tr>
+									  </tbody>
+									</table>
+								</div>
+							</div>
+				 		</div>
        </div>
      </div>
    </div>
