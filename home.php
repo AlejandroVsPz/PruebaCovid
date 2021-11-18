@@ -43,7 +43,7 @@
 .backgroundCovid {
     height: 500px;
     overflow-x: hidden;
-    background-image: url("images/covid.jpg");
+    background-image: url("images/backgrounf_image.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -84,15 +84,15 @@
 
     <div class="px-4 py-4 text-center backgroundCovid">
         <img class="d-block mx-auto mb-4" src="images/logo.png" alt="" width="72" height="72">
-        <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Bienvenido <?php echo "$nombre"; ?></h1>
+        <h1 class="display-5 fw-bold" >Bienvenido <?php echo "$nombre"; ?></h1>
         <div class="col-lg-6 mx-auto paragraph">
-            <p class="lead mb-4 text-light" style="text-shadow: 1px 1px 2px black;">Este auto-test le permitirá
+            <p class="lead mb-4 text-dark">Este auto-test le permitirá
                 orientarse con respecto a los síntomas de la COVID-19, pero debe saber que nunca sustituirá una consulta
                 médica. Recuerde que si presenta algún síntoma que indique gravedad (dificultad repentina para respirar,
                 alteración del nivel de conciencia, dolor torácico importante...) deberá consultar con el servicio de
                 emergencias sanitarias.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a href="prueba_covid.php?<?php echo "user_id=$user_id" ?>"><button type="button" class="btn btn-light btn-lg px-4 gap-3">Realizar Prueba</button></a>
+                <a href="prueba_covid.php?<?php echo "user_id=$user_id" ?>"><button type="button" class="btn btn-outline-dark btn-lg px-4 gap-3">Realizar Prueba</button></a>
             </div>
         </div>
     </div>
@@ -175,7 +175,27 @@
 
     <div class="b-example-divider"></div>
 
-    <div class="container col-xxl-8 px-4 py-5">
+		<div class="px-3 pt-2 my-5 text-center border-bottom">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Reconoce los Síntomas</h1>
+        <div class="col-lg-6 mx-auto paragraph">
+            <p class="lead mb-4">Si presentas estos síntomas, puedes llamar a los siguientes teléfonos: 800
+                0044 800 o al 55 56 58 11 11. Por favor, considera que, si tienes esos síntomas, no necesariamente
+                tienes COVID-19, podría ser sólo gripe. La mayoría de las personas que se contagien no desarrollarán
+                la enfermedad y mejorarán por sí mismas. Pero aún así pueden transmitir el virus a las demás.
+                Cuidarnos es también cuidar a las demás personas. Por eso debes llamar a los teléfonos anteriores,
+                para que te puedan brindar más información sobre qué puedes hacer.</p>
+        </div>
+        <div class="overflow-hidden col-lg-6 mx-auto" style="width: 40%; height: auto;">
+            <div class="container px-5">
+                <a href="https://coronavirus.gob.mx/informacion-accesible/">
+                    <img src="images/sintomasComun.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+                        width="700" height="500" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
                 <a href="https://www.medicasur.com.mx/es_mx/ms/faseI_Cuales_son_los_sintomas_del_COVID_19">
@@ -193,7 +213,7 @@
                     para que te puedan brindar más información sobre qué puedes hacer.</p>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <div class="b-example-divider"></div>
 

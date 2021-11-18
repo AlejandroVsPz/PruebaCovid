@@ -101,7 +101,7 @@
    </div>
  </div>
 
-   <div class="" style="margin-bottom: auto;">
+   <div class="fixed-bottom" >
      <?php
      include("footer.php");
       ?>

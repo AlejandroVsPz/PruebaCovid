@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	@session_start();
 
 	include("conexion.php");
 
@@ -23,7 +23,7 @@
 
 				if ($verify) {
 
-					$_SESSION["user_email"] = $email;
+					$_SESSION['user_email'] = $email;
 					echo "<script>window.open('home.php', '_self')</script>";
 
 				}else {

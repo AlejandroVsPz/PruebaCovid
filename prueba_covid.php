@@ -47,7 +47,7 @@
   width: 80%;
   height: auto;
   margin: 60px auto;
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255,255,255, 0.9);
   border: 2px solid #34495e;
   padding: 40px 50px;
    border-radius: 20px;
@@ -104,13 +104,13 @@
                   <h5>¿Ha tenido contacto con algún paciente con coronavirus?</h5>
                   <ol style="list-style: none;">
                     <li>
-                      <input type="radio" name="q1" value="1" required="required" />&nbsp;Si
+                      <input type="radio" name="q1" value="1" required />&nbsp;Si
                     </li>
                     <li>
                       <input type="radio" name="q1" value="0" required="required" />&nbsp;No
                     </li>
                     <li>
-                      <input type="radio" name="q1" value="0" required="required" />&nbsp;Nose
+                      <input type="radio" name="q1" value="0" required="required" />&nbsp;No sé
                     </li>
                   </ol>
               </div>
@@ -200,7 +200,7 @@
               </div>
               <!-- Pregunta 9-->
               <div class="form-group">
-                <h5>¿Ha tenido o presenta dolor en pecho? (tórax)</h5>
+                <h5>¿Ha tenido o presenta dolor en pecho? (Tórax)</h5>
                 <ol style="list-style: none;">
                   <li>
                     <input type="radio" name="q9" value="1" required="required" />&nbsp;Si
@@ -224,7 +224,7 @@
               </div>
               <!-- Pregunta 11-->
               <div class="form-group">
-                <h5>¿Padece Hipertensión (presión alta), Diabetes (Azúcar elevada), Asma u Obesidad / sobrepeso?</h5>
+                <h5>¿Padece Hipertensión (Presión alta), Diabetes (Azúcar elevada), Asma u Obesidad / sobrepeso?</h5>
                 <ol style="list-style: none;">
                   <li>
                     <input type="radio" name="q11" value="1" required="required" />&nbsp;Si
@@ -240,7 +240,8 @@
      						<div class="input-group">
                   <div class="row">
                     <div class="col">
-                      <input type="number" step="any" name="peso" class="form-control" placeholder="65 (kg)" required="required" >
+                      <input type="number" step="any" name="peso" class="form-control" placeholder="65">
+											<small id="emailHelp" class="form-text text-muted">Opcional.</small>
                     </div>
                   </div>
      						</div><br>
@@ -251,7 +252,8 @@
      						<div class="input-group">
                   <div class="rows">
                     <div class="col">
-                      <input type="number" step="any" name="estatura" class="form-control" placeholder="1.63 (m)"  required="required">
+                      <input type="number" step="any" name="estatura" class="form-control" placeholder="1.63">
+											<small id="emailHelp" class="form-text text-muted">Opcional.</small>
                     </div>
                   </div>
      						</div><br>
@@ -263,7 +265,8 @@
      						<div class="input-group">
                   <div class="row">
                     <div class="col">
-                      <input type="number"  step="any" name="temperatura" class="form-control" placeholder="37 (ºC)">
+                      <input type="number"  step="any" name="temperatura" class="form-control" placeholder="37">
+											<small id="emailHelp" class="form-text text-muted">Opcional.</small>
                     </div>
                   </div>
      						</div><br>
@@ -275,7 +278,8 @@
      						<div class="input-group">
                   <div class="row">
                     <div class="col">
-                      <input type="number" step="any" name="oxigeno" class="form-control" placeholder="96 (SPO2)">
+                      <input type="number" step="any" name="oxigeno" class="form-control" placeholder="96">
+											<small id="emailHelp" class="form-text text-muted">Opcional.</small>
                     </div>
                   </div>
      						</div><br>
@@ -287,10 +291,12 @@
      						<div class="input-group">
                   <div class="row">
                     <div class="col">
-                      <input type="number" step="any" name="sistolica" class="form-control" placeholder="120 (SYS)">
+                      <input type="number" step="any" name="sistolica" class="form-control" placeholder="120">
+											<small id="emailHelp" class="form-text text-muted">Opcional.</small>
                     </div>
                     <div class="col">
-                      <input type="number"step="any" name="diastolica" class="form-control" placeholder="80 (DIA)">
+                      <input type="number"step="any" name="diastolica" class="form-control" placeholder="80">
+											<small id="emailHelp" class="form-text text-muted">Opcional.</small>
                     </div>
                   </div>
      						</div>

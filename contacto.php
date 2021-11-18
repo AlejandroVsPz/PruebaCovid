@@ -18,14 +18,14 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand ms-5" href="index.php"><img src="images/logo.png" width="30" height="30"
-                class="d-inline-block align-top" alt="">&nbspSimulador Covid</a>
+                class="d-inline-block align-top" alt="">&nbspSimulador COVID-19</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item active">
@@ -92,20 +92,20 @@
                 <input type="text" class="form-control" id="apellido" required>
             </div>
             <div class="col-md-6">
-                <label for="email" class="form-label">Email</label> 
-                <input type="email" class="form-control" id="email" required>               
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
             </div>
             <div class="col-md-6">
-                <label for="telefono" class="form-label">Telefono</label> 
-                <input type="tel" class="form-control" id="telfono" placeholder="(Código de área) Número">               
+                <label for="telefono" class="form-label">Telefono</label>
+                <input type="tel" class="form-control" id="telfono" placeholder="(Código de área) Número">
             </div>
             <div class="col-md-12">
-                <label for="comentarios" class="form-label">Comentarios</label> 
+                <label for="comentarios" class="form-label">Comentarios</label>
                 <textarea class="form-control" id="comentarios" rows="3">
-                </textarea>            
+                </textarea>
             </div>
             <div class="col-md-12">
-                <button type="submit" class="btn btn-outline-secondary btn-lg px-4 gap-3">Enviar</button>     
+                <button type="submit" class="btn btn-outline-secondary btn-lg px-4 gap-3">Enviar</button>
             </div>
 
         </form>

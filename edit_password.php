@@ -46,7 +46,7 @@
   width: 50%;
   height: 80%;
   margin: 60px auto;
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(255,255,255, 0.7);
   border: 2px solid #34495e;
   padding: 40px 50px;
    border-radius: 20px;

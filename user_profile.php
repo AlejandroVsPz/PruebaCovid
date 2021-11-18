@@ -47,7 +47,7 @@
   width: 90%;
   height: auto;
   margin: 60px auto;
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(255,255,255, 0.7);
   border: 2px solid #34495e;
   padding: 40px 50px;
   border-radius: 20px;
@@ -96,7 +96,7 @@
 		             <img src="user_images/<?php echo($resultado['user_image'])  ?>" class="card-img-top image_card" alt="...">
 		             <div class="card-body">
 		               <h5 class="card-title"><?php echo($resultado['user_name'])  ?> <?php echo($resultado['user_lastname'])  ?></h5>
-		               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		               <p class="card-text" style="text-align: justify; text-justify: inter-word;">Este test es informativo y no representa un diagnóstico médico. Si presentas síntomas respiratorios graves, acude inmediatamente a la unidad de salud más cercana.</p>
 		             </div>
 		             <ul class="list-group list-group-flush">
 		               <li class="list-group-item"><i class="bi bi-envelope-fill" style="font-size: 1.5rem;"></i> <?php echo($resultado['user_email'])  ?></li>
