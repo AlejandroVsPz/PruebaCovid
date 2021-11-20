@@ -24,7 +24,7 @@
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand ms-5" href="index.php"><img src="images/logo.png" width="30" height="30"
+        <a class="navbar-brand ms-5" href="index.php"><img src="images/Logo.png" width="30" height="30"
                 class="d-inline-block align-top" alt="">&nbspSimulador COVID-19</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
@@ -32,7 +32,7 @@
                     <a class="nav-link text-dark" aria-current="page" href="index.php">Inicio</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-dark" href="#">Prueba Covid</a>
+                    <a class="nav-link text-dark" href="signin.php">Prueba COVID-19</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link text-dark" aria-current="page" href="#">Acerca de</a>
@@ -66,9 +66,9 @@
 }
 
 .backgroundCovid {
-    height: 630px;
+    height: 500px;
     overflow-x: hidden;
-    background-image: url("images/covid-rmn.png");
+    background-image: url("images/background_virus.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -117,7 +117,8 @@
 
 <body>
 
-    <div class="px-3 pt-2 my-5 text-center border-bottom">
+    <div class="px-3 pt-2 text-center border-bottom backgroundCovid">
+      <br>
         <h1 class="display-5 fw-bold" style="text-shadow: 1px 1px 2px white;">Simulador COVID</h1>
         <div class="col-lg-6 mx-auto paragraph">
             <p class="lead mb-4">Simulador COVID, es un test desarrollado por un equipo de programadores
@@ -139,7 +140,7 @@
             <br>
         </div>
     </div>
-
+<br><br>
     <div class="b-example-divider"></div>
     <div class="px-4 py-4 text-center backgroundAcerca"></div>
     <div class="b-example-divider"></div>

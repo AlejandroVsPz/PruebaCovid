@@ -1,5 +1,5 @@
 <?php
-	session_start();
+session_start();
 
 	include("header.php");
 
@@ -7,7 +7,7 @@
 		header("location: index.php");
 	}
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html>

@@ -82,7 +82,7 @@
   					<h3 style="text-align: center; font-family: 'Arial'; letter-spacing: 1pt;" id="h3"><strong>Iniciar Sesión</strong></h3>
   				</div>
   				<div class="l-part">
-  					<form action="" method="post">
+  					<form action="login.php" method="post">
   						<input type="email" name="email" placeholder="Correo" required="required" class="form-control imput-md"><br>
   						<div class="overlap-text">
   							<input type="password" name="pass" placeholder="Contraseña" required="required" class="form-control input-md"><br>

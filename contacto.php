@@ -32,7 +32,7 @@
                     <a class="nav-link text-dark" aria-current="page" href="index.php">Inicio</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-dark" href="#">Prueba Covid</a>
+                    <a class="nav-link text-dark" href="signin.php">Prueba COVID-19</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link text-dark" aria-current="page" href="acerca.php">Acerca de</a>
